@@ -1,0 +1,220 @@
+
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.saveBtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    color: #fefefe;
+}
+
+.head-container {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.contain {
+    padding: 16px;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: -8px;
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+#list {
+    height: 185px;
+    width: 100%;
+    background-color: antiquewhite;
+    box-sizing: border-box;
+    border: 3px solid;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.avtar {
+    width: 100px;
+    height: 160px;
+}
+
+.info {
+    height: 160px;
+}
+
+.image {
+    float: left;
+}
+
+
+.deleteButton {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: red;
+    color: black;
+    border: none;
+    margin-right: 10px;
+}
+
+.editButton {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    margin-right: 10px;
+}
+
+.post-heading {
+    font-size: 25px;
+    color: #1976d2;
+}
+
+.fieldset {
+  
+    font-size: 1rem;
+    
+}
+
+.legend {
+
+    font-size: 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+    background-color: blue;
+    text-shadow:aliceblue;
+    font-weight: bold;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+
+.input-label {
+    font-size: 0.875rem;
+    text-transform: capitalize;
+}
+
+.input-control {
+    padding: 0.75em;
+    font-size: 00.875rem;
+    resize: none;
+}

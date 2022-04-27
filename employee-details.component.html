@@ -1,0 +1,19 @@
+<div class="emp-details">
+    <div *ngIf="items" class="single">
+        <h1 class="main-head">{{items.data.name}} Details,</h1>
+        <label for="id" class="input-label">ID: <span name="id"
+            id="spn">{{items.data.id}}</span></label>
+            <label for="username" class="input-label">User Name: <span name="username"
+                id="spn">{{items.data.username}}</span></label>
+        <label for="name" class="input-label">Name: <span name="name"
+                id="spn">{{items.data.name}}</span></label>
+                <label for="gender" class="input-label">Gender: <span name="gender"
+                    id="spn">{{items.data.gender}}</span></label>
+        <label for="designation" class="input-label">Designation: <span id="spn"
+                name="designation">{{items.data.designation}}</span></label>
+        <label for="phone" class="input-label" name="phone">Phone: <span
+                id="spn">{{items.data.phone_number}}</span></label>
+        <label for="email" class="input-label" >Email: <span name="email" id="spn">{{items.data.email}}</span></label>
+        <label for="address" class="input-label">Address: <span name="address" id="spn">{{items.data.complete_address}}</span></label>
+    </div>
+</div>

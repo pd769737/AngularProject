@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div>
+    <a [routerLink]="['/']" class="Logo">
+        <h1>Employees Data Management</h1>
+    </a>
+</div>
+
+<!-- The form -->
+<form class="example" action="action_page.php">
+  <input type="text" placeholder="Search Employee.." matInput type="text"  [(ngModel)]="searchword" (input)="searchThis()" name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+<menu type="toolbar" class="menubar">
+    <a class="button fancy-button" [routerLink]="['/']">Home</a>
+    <a class="button fancy-button" click="alertAddNew()" routerLink="addNew">Add New</a>
+    <a class="button fancy-button" routerLink="empList">List</a>
+</menu>

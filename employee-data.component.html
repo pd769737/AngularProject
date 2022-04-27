@@ -1,0 +1,71 @@
+<h3>Employees List</h3>
+<div class="grid-view">
+    <div *ngFor="let employee of employees" id="list" class="single">
+        <div class="image">
+            <img [src]="image" alt="Loading Avtar" class="avtar">
+        </div>
+        <div class="info">
+            <h3 [title]="employee.name + ' details'" [routerLink]="['/employees',employee.id]" class="post-heading">
+                {{employee.name}}</h3>
+            <h4 class="desig">Designation: {{employee.designation}}</h4>
+            <button type="button" (click)="handleEmployeeDelete(employee.id)" class="deleteButton">Delete</button>
+            <button type="button" (click)="handleEmployeeEdit($event)" style="width:auto;"
+                [title]="'Edit Employee Data'" class="editButton">Edit</button>
+        </div>
+    </div>
+</div>
+<div id="id01" class="modal">
+    <form (ngSubmit)="handleSave($event)" [formGroup]="employeeForm" class="modal-content animate">
+        <fieldset class="fieldset">
+            <div class="head-container">
+                <legend class="legend">Edit Details Details</legend>
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Edit">&times;</span>
+            </div>
+            <div class="contain">
+                <label for="user-name" class="input-label">Employee User Name</label><input type="text"
+                    name="user-name" placeholder="Enter User Name"   id="employee-user-name"
+                    class="input-control" formControlName="username">
+                <small
+                    *ngIf="employeeForm.get('username').invalid && employeeForm.get('username').dirty ">employee
+                    name
+                    is
+                    required</small>
+            </div>
+            <div class="contain">
+                <label for="name" class="input-label">Employee Name</label><input type="text" name="name"
+                placeholder="Enter Name" id="employee-name" 
+                    class="input-control" formControlName="name">
+                <small *ngIf="employeeForm.get('name').invalid && employeeForm.get('name').dirty ">employee Name
+                    is
+                    required</small>
+            </div>
+            <div class="contain">
+                <label for="phonenumber" class="input-label">Employee Phone Number</label><input type="text"
+                    name="phonenumber" placeholder="Enter Phone Number" id="employee-phone-number"
+                    class="input-control" formControlName="phone_number">
+                <small
+                    *ngIf="employeeForm.get('phone_number').invalid && employeeForm.get('phone_number').dirty ">employee
+                    Phone number is
+                    required</small>
+            </div>
+            <div class="contain">
+                <label for="address" class="input-label">Employee Complete Address</label>
+                <input class="input-control" name="address" placeholder="Enter Address" type="text"
+                    id="employee-address" formControlName="complete_address"
+                   >
+                <small
+                    *ngIf="employeeForm.get('complete_address').invalid && employeeForm.get('complete_address').dirty ">employee
+                    address is
+                    required</small>
+            </div>
+            <div class="contain align-center">
+                <button type="submit" [title]="'Save Data'" (click)="handleSave($event)"
+                    class="saveBtn">Save</button>
+                <button type="button" [title]="'Cancle Edit'"
+                    onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

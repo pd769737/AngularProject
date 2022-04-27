@@ -1,0 +1,68 @@
+<div class="container">
+    <form (ngSubmit)="handleSubmit($event)" [formGroup]="employeeForm" class="new-employee-form">
+        <fieldset class="fieldset">
+            <legend class="legend">Enter New Employee Details</legend>
+            <div class="input-group">
+                <label for="user-name" class="input-label">Employee User Name</label><input type="text" name="user-name"
+                    placeholder="Employee User Name here" id="employee-user-name" class="input-control"
+                    formControlName="username">
+                <small *ngIf="employeeForm.get('username').invalid && employeeForm.get('username').dirty ">employee name
+                    is
+                    required</small>
+            </div>
+            <div class="input-group">
+                <label for="name" class="input-label">Employee Name</label><input type="text" name="name"
+                    placeholder="Employee Name here" id="employee-name" class="input-control" formControlName="name">
+                <small *ngIf="employeeForm.get('name').invalid && employeeForm.get('name').dirty ">employee name is
+                    required</small>
+            </div>
+            <div class="input-group">
+                <label for="email" class="input-label">Employee Email</label><input type="text" name="email"
+                    placeholder="Employee email here" id="employee-email" class="input-control" formControlName="email">
+                <small *ngIf="employeeForm.get('email').invalid && employeeForm.get('email').dirty ">employee name is
+                    required</small>
+            </div>
+            <div class="input-group">
+                <label for="gender" class="input-label">Employee Gender</label><select name="gender"
+                    id="employee-gender" class="input-control" formControlName="gender">
+                    <option value="" disabled selected> Select a Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <small *ngIf="employeeForm.get('gender').invalid && employeeForm.get('gender').dirty ">employee Gender
+                    is
+                    required</small>
+            </div>
+            <div class="input-group">
+                <label for="designation" class="input-label">Employee Designation</label><input type="text"
+                    name="designation" placeholder="Employee designation here" id="employee-designation"
+                    class="input-control" formControlName="designation">
+                <small
+                    *ngIf="employeeForm.get('designation').invalid && employeeForm.get('designation').dirty ">employee
+                    designation is
+                    required</small>
+            </div>
+            <div class="input-group">
+                <label for="phonenumber" class="input-label">Employee Phone Number</label><input type="text"
+                    name="phonenumber" placeholder="Employee phone number here" id="employee-phone-number"
+                    class="input-control" formControlName="phone_number">
+                <small
+                    *ngIf="employeeForm.get('phone_number').invalid && employeeForm.get('phone_number').dirty ">employee
+                    Phone number is
+                    required</small>
+            </div>
+            <div class="input-group">
+                <label for="address" class="input-label">Employee Complete Address</label>
+                <textarea class="input-control" name="address" placeholder="Complete Address Here" id="employee-address"
+                    rows="3" formControlName="complete_address"></textarea>
+                <small
+                    *ngIf="employeeForm.get('complete_address').invalid && employeeForm.get('complete_address').dirty ">employee
+                    address is
+                    required</small>
+            </div>
+            <div class="input-group align-center">
+                <button type="submit" (click)="handleSubmit($event)" class="submitBtn">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
